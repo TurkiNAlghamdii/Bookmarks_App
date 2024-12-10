@@ -78,7 +78,7 @@ class bookmark{
         $stmt = $this->dbConnection->prepare($query);
         $stmt->bindParam(":title", $this->title);
         $stmt->bindParam(":link", $this->link);
-        $stmt->bindParam(":id", $this->id, PDO::PARAM_INT); // here <--------------- The PD0::PARAM_INT
+        $stmt->bindParam(":id", $this->id, PDO::PARAM_INT); 
     
         if($stmt->execute() && $stmt->rowCount()==1){
             return true;
@@ -90,7 +90,7 @@ class bookmark{
         $query = "DELETE FROM " . $this->dbTable . " WHERE id = :id";
         $stmt = $this->dbConnection->prepare($query);
 
-        $stmt->bindParam(":id", $this->id, PDO::PARAM_INT); // here <--------------- The PD0::PARAM_INT
+        $stmt->bindParam(":id", $this->id, PDO::PARAM_INT);
 
         if ($stmt->execute() && $stmt->rowCount() == 1) {
             return true;

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import BookmarkList from "./BookmarkList";
-import BookmarkForm from "./BookmarkForm";
+import BookmarkForm from "./AddingForm";
 
 function App() {
   const [refresh, setRefresh] = useState(false);
